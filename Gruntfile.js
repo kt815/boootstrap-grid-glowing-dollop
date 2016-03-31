@@ -8,6 +8,25 @@ module.exports = function(grunt) {
 		pkg: grunt.file.readJSON('package.json'),
 
 
+		// https://github.com/gruntjs/grunt-contrib-jade
+		jade: {
+		  pretty: {
+		    options: {
+		      data: {
+		        debug: false
+		      }
+		    },
+		    files: {
+		      "dist/index.html": ["src/index.jade"]
+		    },
+		    options: {
+      			pretty: true
+    		}
+		    
+		  }},
+
+
+
 		// https://github.com/gruntjs/grunt-contrib-copy
 		copy: {
 			dist: {
@@ -164,6 +183,7 @@ module.exports = function(grunt) {
 	});
 
 	// Load plugins
+	grunt.loadNpmTasks('grunt-contrib-jade');
 	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks('grunt-processhtml');
 	grunt.loadNpmTasks('grunt-contrib-htmlmin');

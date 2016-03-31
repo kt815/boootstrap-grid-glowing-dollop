@@ -2,8 +2,11 @@
   "name": "BootstrapGridBuild",
   "version": "0.1.0",
   "main": "Gruntfile.js",
-  "devDependencies": {},
+  "devDependencies": {
+    "grunt-contrib-jade": "~0.15.0"
+  },
   "dependencies": {
-    "bootstrap": "~3.3.5"
+    "bootstrap": "~3.3.5",
+    "jade": "^1.11.0"
   }
 }
