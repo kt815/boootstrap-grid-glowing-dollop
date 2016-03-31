@@ -17,7 +17,17 @@ module.exports = function(grunt) {
 					'src/index.html'
 				],
     			dest: 'dist/',
+			},
+
+			css: {
+				expand: true,
+				flatten: true,
+				src: [
+					 'src/less/app.css'
+				],
+    			dest: 'dist/src',
 			}
+
 		},
 
 		processhtml: {
